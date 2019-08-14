@@ -24,7 +24,7 @@ void main() {
 
   var list1;
   // spread operator
-  var list2 = [0,...?list1];
+  var list2 = [0,...?list];
   print(list2);
   var b = false;
   var names = [
@@ -40,6 +40,9 @@ void main() {
     for(var c in list3) '#$c'
   ];
   print(list4);
+
+  List myList = [1,'ab',true];
+  print(myList);
 
 
 }
