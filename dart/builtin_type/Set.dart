@@ -5,8 +5,16 @@
 2. 集合中的元素与顺序无关， 1,2,3 =  3,2,1
  */
 
+
+
 void main() {
-  var set1 = {1,2,2,3,4,5};
+  var set1 = {1,2,"x",3,4,5};
+  var aa = {1,2,"x",4,3,5,6};
+
+
+  print(set1);
+  set1.add(1);
+  set1.add("aa");
   print(set1);
 
   // 空集合
@@ -26,6 +34,7 @@ void main() {
 
   set3.remove("world");
   print(set3);
+
   set3.removeWhere((s){
     if(s == 'abc') {
       return true;
@@ -42,4 +51,6 @@ void main() {
   };
 
   //constantSet.add('ccc');
+
+
 }
