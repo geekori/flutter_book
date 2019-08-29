@@ -3,15 +3,17 @@
 
 1. 集合中的元素是不重复的。 1,2,3,4（集合）   1,1,2,3,4（非集合）
 2. 集合中的元素与顺序无关， 1,2,3 =  3,2,1
+
+https://pub.dev/packages/collection
  */
 
 
 
 void main() {
   var set1 = {1,2,"x",3,4,5};
-  var aa = {1,2,"x",4,3,5,6};
+  var aa = {1,2,"x",3,4,5};
 
-
+  print(aa == set1);
   print(set1);
   set1.add(1);
   set1.add("aa");
