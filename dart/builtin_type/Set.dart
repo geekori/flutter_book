@@ -8,36 +8,36 @@ https://pub.dev/packages/collection
  */
 
 
-
+import 'package:collection/collection.dart';
 void main() {
-  var set1 = {1,2,"x",3,4,5};
-  var aa = {1,2,"x",3,4,5};
-
-  print(aa == set1);
+  var set1 = {1,2,"x",4,3,5};
+  var set2 = {1,2,"x",3,4,5};
+  print(SetEquality().equals(set1, set2));
+  print(set1 == set2);
   print(set1);
   set1.add(1);
   set1.add("aa");
   print(set1);
 
   // 空集合
-  var set2 = <String>{};
-  set2.add('hello');
-  set2.add('world');
+  var set3 = <String>{};
+  set3.add('hello');
+  set3.add('world');
 
   print(set2);
 
-  var set3 = {'abc'};
-  set3.addAll(set2);
-  print(set3);
+  var set4 = {'abc'};
+  set4.addAll(set3);
+  print(set4);
 
-  print(set3.length);
+  print(set4.length);
 
-  print(set3.contains('abcd'));
+  print(set4.contains('abcd'));
 
-  set3.remove("world");
-  print(set3);
+  set4.remove("world");
+  print(set4);
 
-  set3.removeWhere((s){
+  set4.removeWhere((s){
     if(s == 'abc') {
       return true;
     } else
@@ -45,7 +45,7 @@ void main() {
         return false;
     }
   });
-  print(set3);
+  print(set4);
 
   final constantSet = const {
     'aaa',
