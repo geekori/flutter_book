@@ -12,6 +12,9 @@ import 'package:collection/collection.dart';
 void main() {
   var set1 = {1,2,"x",4,3,5};
   var set2 = {1,2,"x",3,4,5};
+
+  print(SetEquality().equals(set1, set2));
+  set2.add(20);
   print(SetEquality().equals(set1, set2));
   print(set1 == set2);
   print(set1);
@@ -46,13 +49,13 @@ void main() {
     }
   });
   print(set4);
-
-  final constantSet = const {
-    'aaa',
-    'bbb'
+  Set data1 = {1,2,3,4};
+  Set<String> data2 = {"iPhone", "特斯拉"};
+  var constantSet = const {
+    'Bill',
+    'Mike'
   };
-
-  //constantSet.add('ccc');
+  constantSet.add('John');
 
 
 }
