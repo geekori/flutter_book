@@ -1,17 +1,6 @@
-/*
-条件控制语句（if和switch）
 
-if(condition) {
-}
-
-if(condition) {
-} else {
-}
-
-
- */
 void main() {
-  /*
+
   var i = 10;
   if(i < 10) {
     print('i < 10');
@@ -20,7 +9,7 @@ void main() {
   } else {
     print('i > 10');
   }
-*/
+
   var n = 20;
   switch(n+1) {
     case 20:
@@ -32,20 +21,8 @@ void main() {
     default:
       print('others');
   }
-
-  /*
-
-  /* if(i) {
-
-  }*/
-
-  /*
- switch
- 1. 标准的用法
- 2. 多个条件值使用相同的代码，如何处理
- 3. 如何连续执行多个分支
-  */
   var command = 'open';
+
   switch(command) {
     case 'closed':
       print('关闭');
@@ -61,10 +38,6 @@ void main() {
 
   }
   // 多个条件值使用相同的代码
-  // 例如，有n个条件值的代码相同，那么可以将前n-1个分支
-  // 的代码完全清除。
-  //  如果某一个分支包含代码，那么必须在这个分支代码的最后
-  //  加上中断语句：break、continue、throw、return
   command = 'new';
   switch(command) {
     case 'open':
@@ -77,8 +50,7 @@ void main() {
     default:
       print('默认操作');
   }
-
-  // 如何连续执行多个分支
+  // 连续执行多个分支，并且进行进行分支跳转
   command = 'closed';
   switch(command) {
     closed_label:
@@ -92,10 +64,14 @@ void main() {
     new_label:
     case 'new':
       print('new');
-      continue closed_label;
+
+      break;
     default:
       print('others');
 
   }
-  */
+
+
+
+
 }
