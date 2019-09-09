@@ -64,7 +64,6 @@ void main() {
     new_label:
     case 'new':
       print('new');
-
       break;
     default:
       print('others');
