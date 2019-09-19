@@ -1,5 +1,14 @@
 // 构造方法
 // 构造方法：也就是说创建类实例的过程中调用的方法
+class MyClass {
+  MyClass() {
+    print("调用MyClass类的构造方法");
+  }
+  /*MyClass(double value) {
+
+  }*/
+}
+
 class User {
   var name;
   double salary;
@@ -27,10 +36,7 @@ class User {
   User.fromMap(Map map) :this(map['name'], map['salary'], map['age']);
 }
 
-class ConstClass {
-  final int x,y;
-  const ConstClass(this.x,this.y);
-}
+
 class Product {
   final String name;
 
@@ -59,17 +65,15 @@ void main() {
 
   /*
   1. 构造方法的重定向，一个构造方法调用了另外一个构造方法（通过this调用）
-  2. 常量构造方法
-  3. factory构造方法
+
+  2. factory构造方法
    */
 
-  var c1 = const ConstClass(10, 10);
-  var c2 = const ConstClass(10, 10);
-  print(identical(c1, c2));
+
 
   // singleton模式（单件设计模式）
   var product1 = Product('iphone');
   var product2 = Product('iphone');
   print(identical(product1, product2));
-
+  MyClass();
 }
