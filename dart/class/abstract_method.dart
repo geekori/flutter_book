@@ -12,6 +12,10 @@
  */
 abstract class ParentClass {
   void doSomething();
+  void process() {
+    print("process");
+  }
+
 }
 class ChildClass1 extends ParentClass {
   void doSomething() {
@@ -29,5 +33,7 @@ void main() {
 
   pc1.doSomething();
   pc2.doSomething();
+  pc1.process();
+  pc2.process();
 
 }
