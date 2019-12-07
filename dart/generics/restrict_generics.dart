@@ -23,7 +23,7 @@ void main() {
   MyClass<MyChild1> my1 = MyClass();
   print(my1.toString());
 
- // var my2 = MyClass<MyChild2>();
+  // var my2 = MyClass<MyChild2>();
 
   var my3 = MyClass();
   print(my3.toString());

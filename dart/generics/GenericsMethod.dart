@@ -7,6 +7,10 @@ class MyClass {
     return value;
   }
 }
+T add<T>(List<T> ts, T value) {
+  ts.add(value);
+  return value;
+}
 void main() {
   var my = MyClass();
   List<int> values1 = List();
@@ -24,7 +28,12 @@ void main() {
   print(values1);
   print(values2);
 
-  // my.add(values1, "abcd");  error
+  List<String> values3 = List();
+  add<String>(values3,"123");
+  add<String>(values3,"hello world");
+  print(values3);
+
+
 
 
 }
