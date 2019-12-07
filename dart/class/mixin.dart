@@ -1,14 +1,3 @@
-/*
-混合（mixin）
-
-支持单继承
-
-Person 1. Teacher   2. Boss
-MyChild  extends MyParent
-
-
- */
-
 mixin Teacher {
   String course;
 
@@ -17,6 +6,9 @@ mixin Teacher {
   }
   setCourse(String course) {
     this.course = course;
+  }
+  String getData() {
+    return "Teacher Data";
   }
 }
 mixin Boss {
@@ -29,6 +21,10 @@ mixin Boss {
     this.company = company;
   }
 
+  String getData() {
+    return "Boss Data";
+  }
+
 }
 class Author {
   String book;
@@ -39,11 +35,25 @@ class Author {
   void setBook(String book) {
     this.book = book;
   }
+  String getData() {
+    return "Author Data";
+  }
 }
-class Person extends Author with Teacher,Boss {
+class MyClass {
+  String getValue() {
+    return "hello world";
+  }
+}
+class Person extends Author with Teacher,Boss implements MyClass{
   String getCompany() {
+
     return "<" + super.getCompany() + ">";
   }
+
+  String getValue() {
+    return "Person Value";
+  }
+
 }
 void main() {
   var person = Person();
@@ -52,4 +62,6 @@ void main() {
 
   person.setCompany("欧瑞科技");
   print(person.getCompany());
+
+  print(person.getData());
 }

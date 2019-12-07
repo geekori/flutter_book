@@ -24,7 +24,6 @@ class ParentClass {
   }
 }
 class ChildClass1 extends ParentClass {
-
 }
 class ChildClass2 implements ParentClass {
   String test(){
