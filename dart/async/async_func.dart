@@ -8,10 +8,15 @@ Future greet(String name) async {
 Future<num> add(num a, num b) async {
   return a + b;
 }
+void addNum(num a, num b) async {
+  print(a+b);
+}
 Future main() async {
   print(greet("bill"));
   print(await greet("Mike"));
 
   print(add(4,5.3));
   print(await add(4,5.3));
+
+  addNum(1,2);
 }
